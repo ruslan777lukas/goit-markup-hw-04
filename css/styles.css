@@ -270,7 +270,15 @@ ul {
 
 .section-one {
   padding: 188px 0;
+  background-size: 1440px auto;
   background-color: #2e2f42;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office\ 1.jpg);
   margin: 0;
 }
 
