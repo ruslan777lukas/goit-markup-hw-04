@@ -19,6 +19,7 @@ button {
 }
 
 .header-border-bottom {
+  position: relative;
   border-bottom: 1px solid #e7e9fc;
 }
 
@@ -31,6 +32,10 @@ button {
 
 .portfolio-li {
   width: calc((100% - 48px) / 3);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .portfolio-li:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -56,6 +61,9 @@ button {
   /* align-items: center; */
   justify-content: center;
   padding: 12px 12px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-social-media {
   fill: #f4f4fd;
@@ -67,9 +75,18 @@ button {
   background-color: #2e2f42;
 }
 .footer-text {
-  padding-right: 864px;
   color: #f4f4fd;
+  max-width: 264px;
 }
+.footer-text-two {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
 .nav-webstudio-footer {
   display: inline-block;
   margin-bottom: 16px;
@@ -83,6 +100,19 @@ button {
   color: #4d5ae5;
 }
 .nav-webstudio-footer .footer-name {
+  color: #f4f4fd;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 120px;
+}
+
+.footer-info-block {
+  display: inline-block;
   color: #f4f4fd;
 }
 
@@ -266,12 +296,27 @@ ul {
   letter-spacing: 0.02em;
   font-weight: 500;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-studio:focus {
   color: #404bbf;
 }
+
 .nav-studio:hover {
   color: #404bbf;
+}
+.nav-studio:active::after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  content: "";
+  width: 48px;
+  height: 4px;
+  background: #404bbf;
+  border-radius: 2px;
 }
 
 .mailto {
@@ -280,6 +325,9 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #434455;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mailto:focus {
   color: #404bbf;
@@ -303,6 +351,9 @@ ul {
   color: #ffffff;
   background-color: #4d5ae5;
   cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-service:focus {
   background-color: #404bbf;
@@ -349,6 +400,10 @@ ul {
   background-color: #ffffff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.heroes:hover .social-link {
+  background-color: #404bbf;
 }
 
 .profession {
