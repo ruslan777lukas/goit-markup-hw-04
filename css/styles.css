@@ -20,10 +20,9 @@ button {
 
 .header-border-bottom {
   border-bottom: 1px solid #e7e9fc;
-  z-index: 999;
-  position: sticky;
-  top: 0;
   background-color: #fff;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .container {
@@ -33,7 +32,11 @@ button {
   margin: 0 auto;
 }
 
-.overlay p {
+/* .overlay p { */
+
+/* } */
+
+.overlay {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -41,26 +44,26 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   padding: 40px 32px 164px 32px;
-}
-
-.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 300px;
   background-color: #4d5ae5;
-  transform: translatey(422px);
+  transform: translateY(100%);
   transition: transform 250ms ease-in-out;
 }
 
 .portfolio-li:hover .overlay {
-  transform: translateX(0);
+  transform: translateY(0);
+}
+
+.photo-overlay {
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-li {
-  position: relative;
-  overflow: hidden;
   width: calc((100% - 48px) / 3);
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -82,14 +85,17 @@ button {
 }
 .social-li {
   display: flex;
+  width: 40px;
+  height: 40px;
 }
 .social-link {
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   background-color: #4d5ae5;
   border-radius: 50px;
   justify-content: center;
+  align-items: center;
   padding: 12px 12px;
   transition-property: background-color;
   transition-duration: 250ms;
@@ -152,12 +158,14 @@ button {
 
 .icon-profits {
   display: flex;
+  /* align-items: center; */
+  justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  width: 264px;
   height: 112px;
-  background: #f4f4fd;
-  padding: 24px 100px 24px 100px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
+  padding: 24px 100px;
 }
 
 .profits {
@@ -167,7 +175,7 @@ button {
 
 .shirina-bloka {
   width: calc((100% - 72px) / 4);
-  text-align: left;
+  /* text-align: left; */
 }
 
 .our-team {
@@ -272,7 +280,6 @@ ul {
 .header-three-profit {
   text-align: left;
   margin-bottom: 8px;
-  margin-top: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -325,6 +332,7 @@ ul {
 }
 
 .nav-studio {
+  position: relative;
   padding: 24px 0;
   color: #2e2f42;
   letter-spacing: 0.02em;
@@ -342,15 +350,57 @@ ul {
 .nav-studio:hover {
   color: #404bbf;
 }
-.nav-studio-studio::after {
+
+.nav-studio::after {
   position: absolute;
+  left: 0;
   bottom: -1px;
   display: block;
   content: "";
-  width: 48px;
+  width: 100%;
   height: 4px;
   background: #404bbf;
   border-radius: 2px;
+}
+
+.nav-studio-cs {
+  position: relative;
+  padding: 24px 0;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-studio-cs:focus {
+  color: #404bbf;
+}
+
+.nav-studio-cs:hover {
+  color: #404bbf;
+}
+
+.nav-studio-po {
+  position: relative;
+  padding: 24px 0;
+  color: #2e2f42;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-studio-po:focus {
+  color: #404bbf;
+}
+
+.nav-studio-po:hover {
+  color: #404bbf;
 }
 
 .mailto {
@@ -397,9 +447,9 @@ ul {
 }
 
 .section-one {
-  position: relative;
+  background-size: cover;
   padding: 188px 0;
-  background-size: 1440px auto;
+  max-width: 1440px;
   background-color: #2e2f42;
   background-repeat: no-repeat;
   background-position: center;
@@ -408,7 +458,7 @@ ul {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office\ 1.jpg);
-  margin: 0;
+  margin: 0 auto;
 }
 
 .section-two {
