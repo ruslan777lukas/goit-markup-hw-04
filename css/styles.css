@@ -514,7 +514,7 @@ ul {
 .heroes:hover .social-link {
   background-color: #404bbf;
 }
-.social-link {
+.social-link:focus {
   background-color: #404bbf;
 }
 
