@@ -32,10 +32,6 @@ button {
   margin: 0 auto;
 }
 
-/* .overlay p { */
-
-/* } */
-
 .overlay {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -83,6 +79,15 @@ button {
   flex-direction: row;
   gap: 24px;
 }
+
+.social-media-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+}
+
 .social-li {
   display: flex;
   width: 40px;
@@ -177,14 +182,14 @@ button {
 
 .icon-profits {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   height: 112px;
   background-color: #f4f4fd;
   margin-bottom: 8px;
-  padding: 24px 100px;
+  /* padding: 24px 100px; */
 }
 
 .profits {
@@ -353,7 +358,7 @@ ul {
 .nav-studio {
   position: relative;
   padding: 24px 0;
-  color: #2e2f42;
+  color: #404bbf;
   letter-spacing: 0.02em;
   font-weight: 500;
   text-decoration: none;
@@ -476,7 +481,7 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office\ 1.jpg);
+    url(../images/people-office_1.jpg);
   margin: 0 auto;
 }
 
