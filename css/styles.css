@@ -157,13 +157,13 @@ button {
 .footer-info {
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: baseline;
   justify-content: flex-start;
-  gap: 120px;
 }
 
 .footer-info-block {
   display: inline-block;
+  margin-right: 120px;
   color: #f4f4fd;
 }
 
